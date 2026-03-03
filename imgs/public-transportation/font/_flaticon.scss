@@ -1,0 +1,139 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 25/07/2018 08:41
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-001-station-1:before { content: "\f100"; }
+.flaticon-002-airport-1:before { content: "\f101"; }
+.flaticon-003-bus-1:before { content: "\f102"; }
+.flaticon-004-subway:before { content: "\f103"; }
+.flaticon-005-bus-stop-1:before { content: "\f104"; }
+.flaticon-006-railcard:before { content: "\f105"; }
+.flaticon-007-seat:before { content: "\f106"; }
+.flaticon-008-monorail:before { content: "\f107"; }
+.flaticon-009-airship:before { content: "\f108"; }
+.flaticon-010-motorcycle-1:before { content: "\f109"; }
+.flaticon-011-cable-car-1:before { content: "\f10a"; }
+.flaticon-012-train-1:before { content: "\f10b"; }
+.flaticon-013-taxi-5:before { content: "\f10c"; }
+.flaticon-014-bus:before { content: "\f10d"; }
+.flaticon-015-taxi-4:before { content: "\f10e"; }
+.flaticon-016-ticket-1:before { content: "\f10f"; }
+.flaticon-017-ship-1:before { content: "\f110"; }
+.flaticon-018-waiting-room:before { content: "\f111"; }
+.flaticon-019-motorcycle:before { content: "\f112"; }
+.flaticon-020-ticket:before { content: "\f113"; }
+.flaticon-021-tram:before { content: "\f114"; }
+.flaticon-022-train:before { content: "\f115"; }
+.flaticon-023-school-bus-1:before { content: "\f116"; }
+.flaticon-024-bus-stop:before { content: "\f117"; }
+.flaticon-025-ship:before { content: "\f118"; }
+.flaticon-026-rickshaw-1:before { content: "\f119"; }
+.flaticon-027-handle:before { content: "\f11a"; }
+.flaticon-028-van:before { content: "\f11b"; }
+.flaticon-029-taxi-3:before { content: "\f11c"; }
+.flaticon-030-taxi-2:before { content: "\f11d"; }
+.flaticon-031-stop:before { content: "\f11e"; }
+.flaticon-032-school-bus:before { content: "\f11f"; }
+.flaticon-033-traffic-light:before { content: "\f120"; }
+.flaticon-034-access:before { content: "\f121"; }
+.flaticon-035-airport:before { content: "\f122"; }
+.flaticon-036-airplane-1:before { content: "\f123"; }
+.flaticon-037-station:before { content: "\f124"; }
+.flaticon-038-arrivals:before { content: "\f125"; }
+.flaticon-039-baggage:before { content: "\f126"; }
+.flaticon-040-departure:before { content: "\f127"; }
+.flaticon-041-taxi-1:before { content: "\f128"; }
+.flaticon-042-cable-car:before { content: "\f129"; }
+.flaticon-043-no-smoking:before { content: "\f12a"; }
+.flaticon-044-rickshaw:before { content: "\f12b"; }
+.flaticon-045-taxi:before { content: "\f12c"; }
+.flaticon-046-airplane:before { content: "\f12d"; }
+.flaticon-047-road-sign:before { content: "\f12e"; }
+.flaticon-048-route:before { content: "\f12f"; }
+.flaticon-049-flight-attendant:before { content: "\f130"; }
+.flaticon-050-pilot:before { content: "\f131"; }
+    
+    $font-Flaticon-001-station-1: "\f100";
+    $font-Flaticon-002-airport-1: "\f101";
+    $font-Flaticon-003-bus-1: "\f102";
+    $font-Flaticon-004-subway: "\f103";
+    $font-Flaticon-005-bus-stop-1: "\f104";
+    $font-Flaticon-006-railcard: "\f105";
+    $font-Flaticon-007-seat: "\f106";
+    $font-Flaticon-008-monorail: "\f107";
+    $font-Flaticon-009-airship: "\f108";
+    $font-Flaticon-010-motorcycle-1: "\f109";
+    $font-Flaticon-011-cable-car-1: "\f10a";
+    $font-Flaticon-012-train-1: "\f10b";
+    $font-Flaticon-013-taxi-5: "\f10c";
+    $font-Flaticon-014-bus: "\f10d";
+    $font-Flaticon-015-taxi-4: "\f10e";
+    $font-Flaticon-016-ticket-1: "\f10f";
+    $font-Flaticon-017-ship-1: "\f110";
+    $font-Flaticon-018-waiting-room: "\f111";
+    $font-Flaticon-019-motorcycle: "\f112";
+    $font-Flaticon-020-ticket: "\f113";
+    $font-Flaticon-021-tram: "\f114";
+    $font-Flaticon-022-train: "\f115";
+    $font-Flaticon-023-school-bus-1: "\f116";
+    $font-Flaticon-024-bus-stop: "\f117";
+    $font-Flaticon-025-ship: "\f118";
+    $font-Flaticon-026-rickshaw-1: "\f119";
+    $font-Flaticon-027-handle: "\f11a";
+    $font-Flaticon-028-van: "\f11b";
+    $font-Flaticon-029-taxi-3: "\f11c";
+    $font-Flaticon-030-taxi-2: "\f11d";
+    $font-Flaticon-031-stop: "\f11e";
+    $font-Flaticon-032-school-bus: "\f11f";
+    $font-Flaticon-033-traffic-light: "\f120";
+    $font-Flaticon-034-access: "\f121";
+    $font-Flaticon-035-airport: "\f122";
+    $font-Flaticon-036-airplane-1: "\f123";
+    $font-Flaticon-037-station: "\f124";
+    $font-Flaticon-038-arrivals: "\f125";
+    $font-Flaticon-039-baggage: "\f126";
+    $font-Flaticon-040-departure: "\f127";
+    $font-Flaticon-041-taxi-1: "\f128";
+    $font-Flaticon-042-cable-car: "\f129";
+    $font-Flaticon-043-no-smoking: "\f12a";
+    $font-Flaticon-044-rickshaw: "\f12b";
+    $font-Flaticon-045-taxi: "\f12c";
+    $font-Flaticon-046-airplane: "\f12d";
+    $font-Flaticon-047-road-sign: "\f12e";
+    $font-Flaticon-048-route: "\f12f";
+    $font-Flaticon-049-flight-attendant: "\f130";
+    $font-Flaticon-050-pilot: "\f131";

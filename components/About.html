@@ -1,0 +1,53 @@
+import { Check } from 'lucide-react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+import { theme } from '../config/theme';
+import { images } from '../config/images';
+
+export function About() {
+  return (
+    <section id="about" className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Image */}
+          <div className="order-2 lg:order-1">
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <ImageWithFallback
+                src="https://i.imgur.com/LZWOosB.jpeg"
+                alt="Dental office interior"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Right Content */}
+          <div className="order-1 lg:order-2 space-y-6">
+            <h2 className={`text-4xl font-bold text-gray-900`}>
+              {theme.about.title}
+            </h2>
+            <p className={`text-lg text-gray-600 leading-relaxed`}>
+              {theme.about.description1}
+            </p>
+            <p className={`text-lg text-gray-600 leading-relaxed`}>
+              {theme.about.description2}
+            </p>
+            
+            <div className="space-y-4 pt-4">
+              {theme.about.features.map((feature, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className={`flex-shrink-0 w-6 h-6 bg-orange-600 rounded-full flex items-center justify-center mt-1`}>
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <span className={`text-gray-900 text-lg`}>{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <button className={`mt-8 px-8 py-4 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors shadow-lg`}>
+              Learn More About Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
