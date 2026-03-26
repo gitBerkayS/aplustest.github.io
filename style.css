@@ -119,20 +119,17 @@ header {
   letter-spacing: 0.02em;
   color: #ea580c;
   text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), 0 8px 20px rgba(234, 88, 12, 0.18);
 }
 
 .logo img {
   height: 52px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 6px 14px rgba(234, 88, 12, 0.25));
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .logo:hover img {
   transform: scale(1.04);
-  filter: drop-shadow(0 8px 18px rgba(234, 88, 12, 0.32));
 }
 
 /* Navigation */
