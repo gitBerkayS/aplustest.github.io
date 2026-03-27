@@ -17,6 +17,7 @@ const dentistPackIcons = {
 const site = {
   brandName: 'A+ Dental',
   logo: 'imgs/logo.svg',
+  cdcpLogo: 'imgs/cdcp-logo-cropped.png',
   footerLogo: 'imgs/logo-footer.png',
   url: 'https://aplusdental.ca',
   footerTagline: 'Your trusted partner for exceptional dental care and beautiful smiles.',

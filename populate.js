@@ -33,6 +33,18 @@
     setAttr('top-banner-phone', 'href', contact ? 'tel:' + contact.phoneTel : null);
     setText('mobile-phone', contact?.phone);
 
+    const topBannerInner = document.querySelector('.top-banner-inner');
+    if (topBannerInner && !document.getElementById('top-banner-cdcp')) {
+      const cdcpBadge = document.createElement('div');
+      cdcpBadge.id = 'top-banner-cdcp';
+      cdcpBadge.className = 'top-banner-cdcp';
+      cdcpBadge.innerHTML = `
+        <img src="${site?.cdcpLogo || ''}" alt="CDCP logo" class="top-banner-cdcp-logo" width="24" height="20">
+        <span>CDCP Approved</span>
+      `;
+      topBannerInner.prepend(cdcpBadge);
+    }
+
     const navContainer = $('main-nav');
     if (navContainer && site?.navLinks) {
       navContainer.innerHTML = site.navLinks
