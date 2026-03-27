@@ -34,6 +34,7 @@ const site = {
       ],
     },
     { href: 'team.html', label: 'Our Team' },
+    { href: 'careers.html', label: 'Careers' },
     { href: 'contact.html', label: 'Contact' },
   ],
 
@@ -43,21 +44,28 @@ const site = {
     { href: 'about.html', label: 'About Us' },
     { href: 'new-patients.html', label: 'New Patients' },
     { href: 'team.html', label: 'Our Team' },
+    { href: 'careers.html', label: 'Careers' },
   ],
 
   footerServices: [
-    { href: 'services.html', label: 'Routine Exam & Checkup' },
+    { href: 'services.html', label: 'Preventive Dentistry' },
+    { href: 'services.html', label: 'Routine Dental Exam & Checkup' },
+    { href: 'services.html', label: 'Emergency Dentistry' },
+    { href: 'services.html', label: 'Dental Implants' },
     { href: 'services.html', label: 'Teeth Whitening' },
+    { href: 'services.html', label: 'Crown and Bridge' },
     { href: 'services.html', label: 'Dental Fillings' },
     { href: 'services.html', label: 'Cosmetic Dentistry' },
-    { href: 'services.html', label: 'Root Canal' },
+    { href: 'services.html', label: 'Root Canal Treatment' },
     { href: 'services.html', label: 'Tooth Extractions' },
+    { href: 'services.html', label: 'Dentures' },
+    { href: 'services.html', label: 'Post Procedure Care' },
   ],
 
   social: {
     facebook: { url: '#', label: 'Visit our Facebook page' },
-    twitter: { url: '#', label: 'Visit our Twitter page' },
-    instagram: { url: '#', label: 'Visit our Instagram page' },
+    googleMaps: { url: 'https://share.google/hDeuZpbhx6h9lPHdo', label: 'Open our Google Maps profile' },
+    instagram: { url: 'https://www.instagram.com/dental_aplus/', label: 'Visit our Instagram page' },
     linkedin: { url: '#', label: 'Visit our LinkedIn page' },
   },
 };

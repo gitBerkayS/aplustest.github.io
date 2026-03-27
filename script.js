@@ -104,6 +104,37 @@ function initContactForm() {
   }
 }
 
+// Careers Form Handler
+function initCareersForm() {
+  const careersForm = document.getElementById('careers-form');
+
+  if (careersForm) {
+    const roleSelect = document.getElementById('career-role');
+    const otherRoleGroup = document.getElementById('career-role-other-group');
+    const otherRoleInput = document.getElementById('career-role-other');
+
+    function syncOtherRoleField() {
+      const isOtherSelected = roleSelect?.value === 'Other';
+      if (!otherRoleGroup || !otherRoleInput) return;
+      otherRoleGroup.hidden = !isOtherSelected;
+      otherRoleInput.required = isOtherSelected;
+      if (!isOtherSelected) {
+        otherRoleInput.value = '';
+      }
+    }
+
+    roleSelect?.addEventListener('change', syncOtherRoleField);
+    syncOtherRoleField();
+
+    careersForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your application. Our team will review your submission and contact you if there is a suitable opportunity.');
+      careersForm.reset();
+      syncOtherRoleField();
+    });
+  }
+}
+
 // Image Fallback Handler
 function initImageFallback() {
   const images = document.querySelectorAll('img[data-fallback]');
@@ -265,6 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   setActiveNavLink();
   initContactForm();
+  initCareersForm();
   initImageFallback();
   initServiceModal();
   initBookingModal();

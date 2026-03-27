@@ -1419,6 +1419,45 @@ h1, h2, h3, h4,
   padding: 2rem;
 }
 
+.careers-grid {
+  align-items: start;
+}
+
+.careers-submit {
+  width: 100%;
+}
+
+.careers-mission {
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.careers-mission h2 {
+  color: #c2410c;
+  font-size: 2rem;
+  margin: 0 0 0.9rem;
+}
+
+.careers-mission p {
+  color: #57534e;
+  margin: 0 0 1rem;
+  line-height: 1.7;
+}
+
+.careers-points {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #57534e;
+  line-height: 1.7;
+}
+
+.careers-points li {
+  margin-bottom: 0.5rem;
+}
+
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -1795,6 +1834,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   color: #e7e5e4;
   transition: background-color 0.2s, color 0.2s;
 }
@@ -1807,6 +1847,21 @@ footer {
 .footer-social svg {
   width: 1.125rem;
   height: 1.125rem;
+}
+
+.footer-social-img {
+  width: 62%;
+  height: 62%;
+  max-width: 62%;
+  max-height: 62%;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(89%) sepia(5%) saturate(276%) hue-rotate(326deg) brightness(96%) contrast(89%);
+  transition: filter 0.2s;
+}
+
+.footer-social a:hover .footer-social-img {
+  filter: brightness(0) saturate(100%) invert(100%);
 }
 
 .footer-section h4 {
