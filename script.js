@@ -180,12 +180,18 @@ function initBookingModal() {
   bookingModal.innerHTML = `
     <div class="booking-modal-backdrop"></div>
     <div class="booking-modal-content">
-      <button type="button" class="booking-modal-close" aria-label="Close booking options">×</button>
-      <h2 id="booking-modal-title" class="booking-modal-title">Book an Appointment</h2>
-      <p class="booking-modal-subtitle">Choose the type of appointment:</p>
-      <div class="booking-modal-actions">
-        <a href="${emergencyBookingUrl}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Emergency Appointment</a>
-        <a href="${cleaningBookingUrl}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Cleaning Appointment</a>
+      <div class="booking-modal-header">
+        <button type="button" class="booking-modal-close" aria-label="Close booking options">×</button>
+        <h2 id="booking-modal-title" class="booking-modal-title">Book an Appointment</h2>
+      </div>
+      <div class="booking-modal-body">
+        <p class="booking-modal-subtitle">Choose the type of appointment:</p>
+      </div>
+      <div class="booking-modal-footer">
+        <div class="booking-modal-actions">
+          <a href="${emergencyBookingUrl}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Emergency Appointment</a>
+          <a href="${cleaningBookingUrl}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Cleaning Appointment</a>
+        </div>
       </div>
     </div>
   `;
