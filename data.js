@@ -19,7 +19,7 @@ const site = {
   logo: 'imgs/logo.svg',
   cdcpLogo: 'imgs/cdcp-logo.svg',
   footerLogo: 'imgs/logo-footer.png',
-  url: 'https://aplusdental.ca',
+  url: 'https://aplusdentalclinic.com',
   footerTagline: 'Your trusted partner for exceptional dental care and beautiful smiles.',
 
   navLinks: [
