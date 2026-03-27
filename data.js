@@ -87,7 +87,7 @@ const hero = {
   primaryButtonHref: 'contact.html',
   secondaryButton: 'Our Services',
   secondaryButtonHref: 'services.html',
-  heroImage: 'https://i.imgur.com/LZWOosB.jpeg',
+  heroImage: 'imgs/clinic-front.png',
   heroImageAlt: 'Modern dental clinic',
   stats: [
     { value: '30+', label: 'Years Experience' },
@@ -193,7 +193,7 @@ const aboutPage = {
   },
   content: {
     title: 'About A+ Dental',
-    image: 'https://i.imgur.com/LZWOosB.jpeg',
+    image: 'imgs/clinic-front.png',
     imageAlt: 'Dental office interior',
     description1: 'For over 30 years, A+ Dental has been providing exceptional dental care to families in our community. Our mission is to deliver personalized, gentle care using the latest technology and techniques.',
     description2: "We believe that everyone deserves a healthy, beautiful smile. That's why we focus on preventive care and patient education, ensuring you have the knowledge and tools to maintain optimal oral health.",
