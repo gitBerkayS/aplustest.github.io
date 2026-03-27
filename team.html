@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meet the experienced dental professionals at A+ Dental in Vancouver, BC. Our skilled team is dedicated to providing you with the best care possible.">
+  <title>Top-Rated Dentist in Vancouver | Dr. Kourosh Kaviani</title>
+  <meta name="description" content="Meet Dr. Kourosh Kaviani at A+ Dental, a top-rated dentist in Vancouver based on patient reviews, with over 40 years of experience.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://aplusdental.ca/team.html">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aplusdental.ca/team.html">
-  <meta property="og:title" content="Our Team - A+ Dental">
-  <meta property="og:description" content="Meet the experienced dental professionals at A+ Dental in Vancouver, BC. Our skilled team is dedicated to providing you with the best care possible.">
+  <meta property="og:title" content="Top-Rated Dentist in Vancouver | Dr. Kourosh Kaviani">
+  <meta property="og:description" content="Meet Dr. Kourosh Kaviani at A+ Dental, a top-rated dentist in Vancouver based on patient reviews, with over 40 years of experience.">
   <meta property="og:image" content="imgs/clinic-front.png">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://aplusdental.ca/team.html">
-  <meta name="twitter:title" content="Our Team - A+ Dental">
-  <meta name="twitter:description" content="Meet the experienced dental professionals at A+ Dental in Vancouver, BC. Our skilled team is dedicated to providing you with the best care possible.">
+  <meta name="twitter:title" content="Top-Rated Dentist in Vancouver | Dr. Kourosh Kaviani">
+  <meta name="twitter:description" content="Meet Dr. Kourosh Kaviani at A+ Dental, a top-rated dentist in Vancouver based on patient reviews, with over 40 years of experience.">
   <meta name="twitter:image" content="imgs/clinic-front.png">
   
   <!-- Resource Hints -->
@@ -155,10 +156,43 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "A+ Dental",
-    "url": "https://aplusdental.ca",
-    "logo": "imgs/logo.svg"
+    "@graph": [
+      {
+        "@type": "Dentist",
+        "@id": "https://aplusdental.ca/#clinic",
+        "name": "A+ Dental",
+        "url": "https://aplusdental.ca",
+        "logo": "https://aplusdental.ca/imgs/logo.svg",
+        "telephone": "+1-604-606-4202",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1288 Commercial Drive",
+          "addressLocality": "Vancouver",
+          "addressRegion": "BC",
+          "postalCode": "V5L 3X4",
+          "addressCountry": "CA"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://aplusdental.ca/team.html#dr-kourosh-kaviani",
+        "name": "Dr. Kourosh Kaviani",
+        "jobTitle": "Family Dentist",
+        "worksFor": {
+          "@id": "https://aplusdental.ca/#clinic"
+        },
+        "knowsLanguage": [
+          "English",
+          "Farsi"
+        ],
+        "alumniOf": [
+          "College of Dental Surgeons of BC",
+          "Dental Board of California",
+          "NDEB of Canada"
+        ],
+        "description": "Family dentist with over 40 years of experience."
+      }
+    ]
   }
   </script>
   <script src="data.js"></script>

@@ -449,7 +449,19 @@
           <div class="team-info">
             <h3 class="team-name">${m.name}</h3>
             <p class="team-role">${m.role}</p>
-            <p class="team-bio">${m.bio}</p>
+            ${m.experience ? `<p class="team-bio team-experience">${m.experience}</p>` : ''}
+            ${Array.isArray(m.education) && m.education.length ? `
+              <div class="team-meta-group">
+                <h4>Education</h4>
+                <ul class="team-meta-list">${m.education.map((e) => `<li>${e}</li>`).join('')}</ul>
+              </div>
+            ` : ''}
+            ${Array.isArray(m.languages) && m.languages.length ? `
+              <div class="team-meta-group">
+                <h4>Languages Spoken</h4>
+                <p class="team-bio">${m.languages.join(', ')}</p>
+              </div>
+            ` : ''}
           </div>
         </div>
       `

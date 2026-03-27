@@ -91,9 +91,9 @@ const hero = {
   heroImage: 'imgs/clinic-front.png',
   heroImageAlt: 'Modern dental clinic',
   stats: [
-    { value: '30+', label: 'Years Experience' },
-    { value: '10,000+', label: 'Happy Patients' },
-    { value: '7+', label: 'Awards Won' },
+    { value: '40+', label: 'Years Experience' },
+    { value: '20,000+', label: 'Happy Patients (Est.)' },
+    { value: '5★', label: 'Rated by Patients' },
   ],
 };
 
@@ -311,8 +311,8 @@ const contactPage = {
 // Team page
 const teamPage = {
   header: {
-    title: 'Meet Our Team',
-    subtitle: 'Our experienced dental professionals are dedicated to providing you with the best care possible. Get to know the friendly faces behind your healthy smile.',
+    title: 'Top-Rated Dentist in Vancouver',
+    subtitle: 'Meet Dr. Kourosh Kaviani at A+ Dental, recognized by patients for trusted care and over 40 years of clinical experience.',
   },
   whyChoose: {
     title: 'Why Choose Our Team',
@@ -450,20 +450,14 @@ const services = [
 const team = [
   {
     name: 'Dr. Kourosh Kaviani',
-    role: 'Chief Dentist',
-    image: 'https://images.unsplash.com/photo-1606811801193-e318c9a87ad7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50aXN0JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2ODU4Nzk0Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    bio: '30+ years of experience in cosmetic and general dentistry',
-  },
-  {
-    name: 'x',
-    role: 'x',
-    image: 'https://images.unsplash.com/photo-1611690061822-b707a67bfebb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50aXN0JTIwcGF0aWVudCUyMHNtaWxlfGVufDF8fHx8MTc2ODYyMzEyNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    bio: '{description}',
-  },
-  {
-    name: 'x',
-    role: 'x',
-    image: 'https://images.unsplash.com/photo-1764004450351-37fb72cb8e8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjbGluaWMlMjBtb2Rlcm58ZW58MXx8fHwxNzY4NjAwOTU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    bio: '{description}',
+    role: 'Family Dentist',
+    image: 'imgs/doctor.svg',
+    experience: 'Over 40 years of experience',
+    education: [
+      'College of Dental Surgeons of BC',
+      'Dental Board of California',
+      'NDEB of Canada',
+    ],
+    languages: ['English', 'Farsi'],
   },
 ];

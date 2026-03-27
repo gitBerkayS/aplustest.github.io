@@ -1165,21 +1165,18 @@ h1, h2, h3, h4,
 .team-grid {
   display: grid;
   gap: 2rem;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 768px) {
   .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .team-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
 .team-card {
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: white;
   border-radius: 0.75rem;
   overflow: hidden;
@@ -1187,12 +1184,18 @@ h1, h2, h3, h4,
   transition: box-shadow 0.3s;
 }
 
+@media (min-width: 768px) {
+  .team-card {
+    grid-template-columns: minmax(260px, 340px) 1fr;
+  }
+}
+
 .team-card:hover {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .team-image-container {
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 
@@ -1221,11 +1224,37 @@ h1, h2, h3, h4,
 .team-role {
   color: #ea580c;
   font-weight: 500;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
 }
 
 .team-bio {
   color: #57534e;
+  line-height: 1.6;
+}
+
+.team-experience {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.9rem;
+}
+
+.team-meta-group h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ea580c;
+  margin: 1rem 0 0.5rem;
+}
+
+.team-meta-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #57534e;
+}
+
+.team-meta-list li {
+  margin-bottom: 0.25rem;
 }
 
 /* Contact Form */
