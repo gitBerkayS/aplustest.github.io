@@ -70,16 +70,14 @@ function initMobileMenu() {
 
 // Set Active Navigation Link
 function setActiveNavLink() {
-  const pathname = window.location.pathname;
-  const currentPage = pathname.split('/').pop() || 'index.html';
-  const isIndex = currentPage === '' || currentPage === 'index.html';
+  const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
   const navLinks = document.querySelectorAll('nav a, .mobile-menu a');
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('tel:')) return;
-    const linkPage = href.split('/').pop();
-    const match = linkPage === currentPage || (isIndex && linkPage === 'index.html');
+    const normalizedHref = href.replace(/\/+$/, '') || '/';
+    const match = normalizedHref === pathname;
     link.classList.toggle('active', match);
   });
 
