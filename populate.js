@@ -221,7 +221,7 @@
           (s, i) => `
         <div class="service-card">
           <div class="service-icon">
-            <img src="${s.icon}" alt="" class="icon-xl" width="56" height="56">
+            ${s.icon ? `<img src="${s.icon}" alt="" class="icon-xl" width="56" height="56">` : '<span class="service-icon-placeholder" aria-hidden="true"></span>'}
           </div>
           <h3 class="service-title">${s.title}</h3>
           <p class="service-description">${s.description}</p>

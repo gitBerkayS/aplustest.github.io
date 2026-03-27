@@ -708,12 +708,23 @@ h1, h2, h3, h4,
   filter: brightness(0) saturate(100%) invert(48%) sepia(89%) saturate(1582%) hue-rotate(358deg) brightness(98%) contrast(91%) drop-shadow(0 0 0.5px rgba(234, 88, 12, 0.5));
 }
 
+.service-icon-placeholder {
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 2px dashed #fdba74;
+  border-radius: 0.35rem;
+}
+
 .service-card:hover .service-icon svg {
   color: white;
 }
 
 .service-card:hover .service-icon img {
   filter: brightness(0) saturate(100%) invert(100%) drop-shadow(0 0 0.5px rgba(255, 255, 255, 0.5));
+}
+
+.service-card:hover .service-icon .service-icon-placeholder {
+  border-color: #fff7ed;
 }
 
 .service-title {

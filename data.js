@@ -389,6 +389,60 @@ const services = [
       careTips: 'Bite on gauze for 30–60 minutes to control bleeding. Avoid rinsing, spitting, or using a straw for 24 hours. Eat soft foods and avoid the extraction site. Discuss replacement options like implants or bridges with us.',
     },
   },
+  {
+    title: 'Crown and Bridge',
+    description: 'Custom crowns and bridges restore damaged or missing teeth, improving function, comfort, and the look of your smile.',
+    icon: '',
+    learnMore: {
+      whatIs: 'Crowns cover and protect weakened teeth, while bridges replace one or more missing teeth by anchoring to nearby teeth or implants.',
+      careTips: 'Brush and floss daily, especially around bridge margins. Avoid chewing very hard foods on new restorations. Keep regular checkups to monitor fit and gum health.',
+    },
+  },
+  {
+    title: 'Dentures',
+    description: 'Full and partial dentures designed for a comfortable fit to help restore chewing, speech, and confidence.',
+    icon: '',
+    learnMore: {
+      whatIs: 'Dentures are removable prosthetics used to replace missing teeth. We design them to support facial structure and improve day-to-day function.',
+      careTips: 'Clean dentures daily, remove them overnight unless advised otherwise, and attend adjustment visits to prevent sore spots and maintain fit.',
+    },
+  },
+  {
+    title: 'Dental Implants',
+    description: 'Long-term tooth replacement options that look and feel natural while helping preserve jawbone support.',
+    icon: '',
+    learnMore: {
+      whatIs: 'Dental implants are titanium posts placed in the jaw to support crowns, bridges, or dentures. They provide strong, stable tooth replacement.',
+      careTips: 'Maintain excellent oral hygiene, avoid smoking, and follow all healing instructions. Routine maintenance visits are important for long-term implant health.',
+    },
+  },
+  {
+    title: 'Post Procedure Care',
+    description: 'Clear aftercare guidance and follow-up support to promote smooth healing after dental treatment.',
+    icon: '',
+    learnMore: {
+      whatIs: 'Post-procedure care covers instructions after treatments such as extractions, root canals, and restorations to reduce discomfort and complications.',
+      careTips: 'Follow medication and cleaning instructions carefully, avoid activities your dentist advises against, and contact us right away if pain or swelling worsens.',
+    },
+  },
+  {
+    title: 'Preventive Dentistry',
+    description: 'Proactive care including exams, cleanings, and oral health planning to prevent problems before they start.',
+    icon: '',
+    learnMore: {
+      whatIs: 'Preventive dentistry focuses on keeping teeth and gums healthy through regular checkups, hygiene care, fluoride, and early intervention.',
+      careTips: 'Visit on a routine schedule, brush with fluoride toothpaste twice daily, floss once daily, and reduce sugary snacks and drinks.',
+    },
+  },
+  {
+    title: 'Emergency Dentistry',
+    description: 'Urgent dental care for tooth pain, infections, swelling, trauma, and other sudden oral health concerns.',
+    icon: '',
+    learnMore: {
+      whatIs: 'Emergency dentistry provides same-day or urgent assessment and treatment to relieve pain and prevent further damage.',
+      careTips: 'Call us immediately for urgent symptoms. Use a cold compress for swelling, avoid chewing on the affected side, and follow temporary home-care guidance until seen.',
+    },
+  },
 ];
 
 // Team Data
