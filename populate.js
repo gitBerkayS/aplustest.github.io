@@ -40,7 +40,7 @@
       cdcpBadge.className = 'top-banner-cdcp';
       cdcpBadge.innerHTML = `
         <img src="${site?.cdcpLogo || ''}" alt="CDCP logo" class="top-banner-cdcp-logo" width="24" height="20">
-        <span>CDCP Approved</span>
+        <span>Now Accepting CDCP</span>
       `;
       topBannerInner.prepend(cdcpBadge);
     }
