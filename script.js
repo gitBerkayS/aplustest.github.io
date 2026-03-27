@@ -89,6 +89,105 @@ function setActiveNavLink() {
   });
 }
 
+// Google Ads conversion helper: Get directions (website)
+function gtagReportDirectionsConversion(url) {
+  const callback = function () {
+    if (typeof url !== 'undefined' && url) {
+      window.location = url;
+    }
+  };
+
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-17843557765/HG1-CKPfw5AcEIWrvLxC',
+      value: 20.0,
+      currency: 'CAD',
+      event_callback: callback,
+    });
+    return false;
+  }
+
+  callback();
+  return false;
+}
+
+// Google Ads conversion helper: Appointment Booked (website)
+function gtagReportAppointmentConversion(url) {
+  const callback = function () {
+    if (typeof url !== 'undefined' && url) {
+      window.open(url, '_blank', 'noopener');
+    }
+  };
+
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-17843557765/3rF5CJ-Nu5AcEIWrvLxC',
+      value: 100.0,
+      currency: 'CAD',
+      event_callback: callback,
+    });
+    // Fallback in case callback is blocked by browser timing.
+    window.setTimeout(callback, 800);
+    return false;
+  }
+
+  callback();
+  return false;
+}
+
+// Google Ads conversion helper: contact - email, sms, phone (website)
+function gtagReportContactConversion(url) {
+  const callback = function () {
+    if (typeof url !== 'undefined' && url) {
+      window.location = url;
+    }
+  };
+
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-17843557765/Z9E8CL-JzpAcEIWrvLxC',
+      value: 50.0,
+      currency: 'CAD',
+      event_callback: callback,
+    });
+    // Fallback in case callback does not fire in time.
+    window.setTimeout(callback, 600);
+    return false;
+  }
+
+  callback();
+  return false;
+}
+
+function initContactLeadConversionTracking() {
+  const contactTriggers = document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"], a[href^="sms:"]');
+
+  contactTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+      const destination = trigger.getAttribute('href');
+      if (!destination) return;
+      e.preventDefault();
+      gtagReportContactConversion(destination);
+    });
+  });
+}
+
+function initDirectionsConversionTracking() {
+  const directionsTriggers = [
+    document.getElementById('contact-map-link'),
+    ...document.querySelectorAll('.footer-social a[data-social="googleMaps"]'),
+  ].filter(Boolean);
+
+  directionsTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+      const destination = trigger.getAttribute('href');
+      if (!destination || destination === '#') return;
+      e.preventDefault();
+      gtagReportDirectionsConversion(destination);
+    });
+  });
+}
+
 // Contact Form Handler
 function initContactForm() {
   const contactForm = document.getElementById('contact-form');
@@ -219,6 +318,7 @@ function initBookingModal() {
 
   const modalContent = bookingModal.querySelector('.booking-modal-content');
   const closeBtn = bookingModal.querySelector('.booking-modal-close');
+  const bookingLinks = bookingModal.querySelectorAll('.booking-modal-actions a');
   const bookingTriggerLabels = new Set([
     'book appointment',
     'book online',
@@ -273,6 +373,15 @@ function initBookingModal() {
   closeBtn?.addEventListener('click', closeModal);
   bookingModal.querySelector('.booking-modal-backdrop')?.addEventListener('click', closeModal);
 
+  bookingLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const destination = link.getAttribute('href');
+      if (!destination) return;
+      e.preventDefault();
+      gtagReportAppointmentConversion(destination);
+    });
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !bookingModal.hasAttribute('hidden')) {
       closeModal();
@@ -284,6 +393,8 @@ function initBookingModal() {
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   setActiveNavLink();
+  initContactLeadConversionTracking();
+  initDirectionsConversionTracking();
   initContactForm();
   initCareersForm();
   initImageFallback();
