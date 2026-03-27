@@ -71,7 +71,7 @@ const contact = {
     city: 'Vancouver, BC V5L 3X4',
   },
   mapsUrl: 'https://maps.app.goo.gl/EdkV1iA85HCphsmf8',
-  bookingUrl: '#',
+  bookingUrl: 'https://aplusdental.myformsathome.com/TrackerCloud/NewBooking/NP%20Cleaning#step-2',
   hours: {
     weekdays: 'Mon - Fri: 10:00 AM - 5:00 PM',
     saturday: 'Sat: 10:00 AM - 5:00 PM',

@@ -16,6 +16,11 @@ body {
   line-height: 1.5;
 }
 
+:root {
+  --site-header-offset: 9.5rem;
+  --site-header-offset-lg: 10.5rem;
+}
+
 /* Skip Links */
 .skip-link {
   position: absolute;
@@ -342,7 +347,7 @@ nav a.active {
 }
 
 .section-header {
-  padding-top: 8rem;
+  padding-top: var(--site-header-offset);
   padding-bottom: 4rem;
   background: linear-gradient(to bottom, #fff0e0 0%, #fff7ed 50%, #ffffff 100%);
 }
@@ -395,14 +400,14 @@ h1, h2, h3, h4,
 
 /* Hero Section */
 .hero {
-  padding-top: 6.25rem;
+  padding-top: calc(var(--site-header-offset) - 0.75rem);
   padding-bottom: 5rem;
   background: linear-gradient(to bottom, #fff0e0 0%, #fff7ed 50%, #ffffff 100%);
 }
 
 @media (min-width: 1024px) {
   .hero {
-    padding-top: 7.5rem;
+    padding-top: calc(var(--site-header-offset-lg) - 0.75rem);
     padding-bottom: 7rem;
   }
 }
@@ -866,6 +871,78 @@ h1, h2, h3, h4,
 }
 
 .service-modal-footer .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Booking Modal */
+.booking-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.booking-modal[hidden] {
+  display: none;
+}
+
+.booking-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.booking-modal-content {
+  position: relative;
+  width: min(420px, 100%);
+  background: #ffffff;
+  border: 1px solid #e7e5e4;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.25rem 1.1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.booking-modal-close {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.55rem;
+  border: 0;
+  background: transparent;
+  color: #78716c;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.booking-modal-close:hover {
+  color: #1f2937;
+}
+
+.booking-modal-title {
+  margin: 0 1.4rem 0.4rem 0;
+  font-family: 'Marcellus', serif;
+  font-size: 1.35rem;
+  color: #c2410c;
+}
+
+.booking-modal-subtitle {
+  margin: 0 0 1rem;
+  color: #57534e;
+  font-size: 0.95rem;
+}
+
+.booking-modal-actions {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.booking-modal-actions .btn {
   width: 100%;
   justify-content: center;
 }
@@ -1531,7 +1608,7 @@ footer {
 
 /* Contact Page - Background Sectioning */
 .contact-header-section {
-  padding: 8rem 0 4rem;
+  padding: var(--site-header-offset) 0 4rem;
   background: linear-gradient(to bottom, #fff0e0 0%, #fff7ed 50%, #f9fafb 100%);
 }
 
