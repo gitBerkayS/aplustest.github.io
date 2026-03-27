@@ -336,6 +336,15 @@ const teamPage = {
 // Services Data
 const services = [
   {
+    title: 'Preventive Dentistry',
+    description: 'Proactive care including exams, cleanings, and oral health planning to prevent problems before they start.',
+    icon: '',
+    learnMore: {
+      whatIs: 'Preventive dentistry focuses on keeping teeth and gums healthy through regular checkups, hygiene care, fluoride, and early intervention.',
+      careTips: 'Visit on a routine schedule, brush with fluoride toothpaste twice daily, floss once daily, and reduce sugary snacks and drinks.',
+    },
+  },
+  {
     title: 'Routine Dental Exam & Checkup',
     description: 'Comprehensive oral exam, gum assessment, and personalized recommendations to catch issues early and keep your smile healthy.',
     icon: 'imgs/dental-care.svg',
@@ -345,12 +354,39 @@ const services = [
     },
   },
   {
+    title: 'Emergency Dentistry',
+    description: 'Urgent dental care for tooth pain, infections, swelling, trauma, and other sudden oral health concerns.',
+    icon: '',
+    learnMore: {
+      whatIs: 'Emergency dentistry provides same-day or urgent assessment and treatment to relieve pain and prevent further damage.',
+      careTips: 'Call us immediately for urgent symptoms. Use a cold compress for swelling, avoid chewing on the affected side, and follow temporary home-care guidance until seen.',
+    },
+  },
+  {
+    title: 'Dental Implants',
+    description: 'Long-term tooth replacement options that look and feel natural while helping preserve jawbone support.',
+    icon: '',
+    learnMore: {
+      whatIs: 'Dental implants are titanium posts placed in the jaw to support crowns, bridges, or dentures. They provide strong, stable tooth replacement.',
+      careTips: 'Maintain excellent oral hygiene, avoid smoking, and follow all healing instructions. Routine maintenance visits are important for long-term implant health.',
+    },
+  },
+  {
     title: 'Teeth Whitening',
     description: 'Safe, professional whitening to lift stains and brighten your smile options available for in office and take home treatment.',
     icon: 'imgs/dental-cleaning.svg',
     learnMore: {
       whatIs: 'Professional whitening uses safe, effective formulas to lighten tooth color. In-office treatments offer faster results; take-home kits provide convenience. We assess your teeth first to ensure the best outcome.',
       careTips: 'Avoid coffee, tea, wine, and tobacco for 24–48 hours after whitening. Use a straw for dark drinks. Touch-ups can extend your results. Good oral hygiene keeps your smile bright.',
+    },
+  },
+  {
+    title: 'Crown and Bridge',
+    description: 'Custom crowns and bridges restore damaged or missing teeth, improving function, comfort, and the look of your smile.',
+    icon: '',
+    learnMore: {
+      whatIs: 'Crowns cover and protect weakened teeth, while bridges replace one or more missing teeth by anchoring to nearby teeth or implants.',
+      careTips: 'Brush and floss daily, especially around bridge margins. Avoid chewing very hard foods on new restorations. Keep regular checkups to monitor fit and gum health.',
     },
   },
   {
@@ -390,15 +426,6 @@ const services = [
     },
   },
   {
-    title: 'Crown and Bridge',
-    description: 'Custom crowns and bridges restore damaged or missing teeth, improving function, comfort, and the look of your smile.',
-    icon: '',
-    learnMore: {
-      whatIs: 'Crowns cover and protect weakened teeth, while bridges replace one or more missing teeth by anchoring to nearby teeth or implants.',
-      careTips: 'Brush and floss daily, especially around bridge margins. Avoid chewing very hard foods on new restorations. Keep regular checkups to monitor fit and gum health.',
-    },
-  },
-  {
     title: 'Dentures',
     description: 'Full and partial dentures designed for a comfortable fit to help restore chewing, speech, and confidence.',
     icon: '',
@@ -408,39 +435,12 @@ const services = [
     },
   },
   {
-    title: 'Dental Implants',
-    description: 'Long-term tooth replacement options that look and feel natural while helping preserve jawbone support.',
-    icon: '',
-    learnMore: {
-      whatIs: 'Dental implants are titanium posts placed in the jaw to support crowns, bridges, or dentures. They provide strong, stable tooth replacement.',
-      careTips: 'Maintain excellent oral hygiene, avoid smoking, and follow all healing instructions. Routine maintenance visits are important for long-term implant health.',
-    },
-  },
-  {
     title: 'Post Procedure Care',
     description: 'Clear aftercare guidance and follow-up support to promote smooth healing after dental treatment.',
     icon: '',
     learnMore: {
       whatIs: 'Post-procedure care covers instructions after treatments such as extractions, root canals, and restorations to reduce discomfort and complications.',
       careTips: 'Follow medication and cleaning instructions carefully, avoid activities your dentist advises against, and contact us right away if pain or swelling worsens.',
-    },
-  },
-  {
-    title: 'Preventive Dentistry',
-    description: 'Proactive care including exams, cleanings, and oral health planning to prevent problems before they start.',
-    icon: '',
-    learnMore: {
-      whatIs: 'Preventive dentistry focuses on keeping teeth and gums healthy through regular checkups, hygiene care, fluoride, and early intervention.',
-      careTips: 'Visit on a routine schedule, brush with fluoride toothpaste twice daily, floss once daily, and reduce sugary snacks and drinks.',
-    },
-  },
-  {
-    title: 'Emergency Dentistry',
-    description: 'Urgent dental care for tooth pain, infections, swelling, trauma, and other sudden oral health concerns.',
-    icon: '',
-    learnMore: {
-      whatIs: 'Emergency dentistry provides same-day or urgent assessment and treatment to relieve pain and prevent further damage.',
-      careTips: 'Call us immediately for urgent symptoms. Use a cold compress for swelling, avoid chewing on the affected side, and follow temporary home-care guidance until seen.',
     },
   },
 ];

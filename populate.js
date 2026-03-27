@@ -215,21 +215,76 @@
     setAttr('services-cta-secondary', 'href', servicesPage?.cta?.secondaryHref);
 
     const servicesGrid = $('services-grid');
+    const paginationContainer = $('services-pagination');
     if (servicesGrid && typeof services !== 'undefined') {
-      servicesGrid.innerHTML = services
-        .map(
-          (s, i) => `
-        <div class="service-card">
-          <div class="service-icon">
-            ${s.icon ? `<img src="${s.icon}" alt="" class="icon-xl" width="56" height="56">` : '<span class="service-icon-placeholder" aria-hidden="true"></span>'}
+      const orderedServices = services.map((service, idx) => ({ ...service, originalIndex: idx }));
+
+      const collapsedCount = 6;
+      let isExpanded = false;
+      let isAnimating = false;
+
+      function renderGridMarkup(pageItems) {
+        return pageItems
+          .map(
+            (s) => `
+          <div class="service-card">
+            <div class="service-icon">
+              ${s.icon ? `<img src="${s.icon}" alt="" class="icon-xl" width="56" height="56">` : '<span class="service-icon-placeholder" aria-hidden="true"></span>'}
+            </div>
+            <h3 class="service-title">${s.title}</h3>
+            <p class="service-description">${s.description}</p>
+            ${s.learnMore ? `<button type="button" class="service-learn-more" data-service-index="${s.originalIndex}">LEARN MORE &gt;</button>` : ''}
           </div>
-          <h3 class="service-title">${s.title}</h3>
-          <p class="service-description">${s.description}</p>
-          ${s.learnMore ? `<button type="button" class="service-learn-more" data-service-index="${i}">LEARN MORE &gt;</button>` : ''}
-        </div>
-      `
-        )
-        .join('');
+        `
+          )
+          .join('');
+      }
+
+      function renderServicesView(expanded, animate = false) {
+        if (isAnimating) return;
+        isExpanded = expanded;
+        const visibleItems = isExpanded ? orderedServices : orderedServices.slice(0, collapsedCount);
+
+        const newMarkup = renderGridMarkup(visibleItems);
+        if (animate) {
+          isAnimating = true;
+          servicesGrid.classList.remove('services-grid-animate-in');
+          servicesGrid.classList.add('services-grid-animate-out');
+          window.setTimeout(() => {
+            servicesGrid.innerHTML = newMarkup;
+            servicesGrid.classList.remove('services-grid-animate-out');
+            servicesGrid.classList.add('services-grid-animate-in');
+            window.setTimeout(() => {
+              servicesGrid.classList.remove('services-grid-animate-in');
+              isAnimating = false;
+            }, 260);
+          }, 180);
+        } else {
+          servicesGrid.innerHTML = newMarkup;
+        }
+
+        if (!paginationContainer || orderedServices.length <= collapsedCount) {
+          if (paginationContainer) paginationContainer.innerHTML = '';
+          return;
+        }
+
+        paginationContainer.innerHTML = `
+          <button type="button" class="services-expand-toggle" data-toggle-services>
+            ${isExpanded ? 'Show fewer services ↑' : 'Show all services ↓'}
+          </button>
+        `;
+
+        paginationContainer.querySelector('[data-toggle-services]')?.addEventListener('click', () => {
+          renderServicesView(!isExpanded, true);
+        });
+      }
+
+      if (paginationContainer && orderedServices.length > collapsedCount) {
+        renderServicesView(false);
+      } else {
+        servicesGrid.innerHTML = renderGridMarkup(orderedServices);
+        if (paginationContainer) paginationContainer.innerHTML = '';
+      }
     }
   }
 
