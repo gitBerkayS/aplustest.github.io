@@ -94,7 +94,11 @@
           <div class="contact-form">
             <h3 class="contact-form-title">Submit Your Resume</h3>
             <p class="contact-form-subtitle">Apply to current opportunities or join our talent list for future openings.</p>
-            <form id="careers-form">
+            <form id="careers-form" name="careers-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+              <input type="hidden" name="form-name" value="careers-application">
+              <p hidden>
+                <label>Don’t fill this out: <input name="bot-field"></label>
+              </p>
               <div class="form-group">
                 <label for="career-name" class="form-label">Full Name</label>
                 <input type="text" id="career-name" name="name" class="form-input" required>

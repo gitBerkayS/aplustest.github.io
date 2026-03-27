@@ -96,11 +96,7 @@ function initContactForm() {
   const contactForm = document.getElementById('contact-form');
   
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you for your appointment request! We will contact you shortly.');
-      contactForm.reset();
-    });
+    // Let Netlify Forms handle submission server-side.
   }
 }
 
@@ -126,12 +122,7 @@ function initCareersForm() {
     roleSelect?.addEventListener('change', syncOtherRoleField);
     syncOtherRoleField();
 
-    careersForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you for your application. Our team will review your submission and contact you if there is a suitable opportunity.');
-      careersForm.reset();
-      syncOtherRoleField();
-    });
+    // Let Netlify Forms handle submission server-side.
   }
 }
 
