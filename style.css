@@ -1161,6 +1161,27 @@ h1, h2, h3, h4,
   justify-content: center;
 }
 
+.booking-modal-existing-link {
+  display: block;
+  margin-top: 0.9rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #78716c;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.booking-modal-existing-link:hover {
+  color: #c2410c;
+}
+
+.booking-modal-existing-link:focus-visible {
+  outline: 2px solid #ea580c;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
 /* Team Grid */
 .team-grid {
   display: grid;

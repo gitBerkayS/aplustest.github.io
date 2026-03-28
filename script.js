@@ -309,8 +309,9 @@ function initBookingModal() {
       <div class="booking-modal-footer">
         <div class="booking-modal-actions">
           <a href="${emergencyBookingUrl}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Emergency Appointment</a>
-          <a href="${cleaningBookingUrl}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Book Cleaning Appointment</a>
+          <a href="${cleaningBookingUrl}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">New Patient Appointment</a>
         </div>
+        <a href="/contact#contact-form" class="booking-modal-existing-link">Existing patient? Send us a message through our contact form.</a>
       </div>
     </div>
   `;
