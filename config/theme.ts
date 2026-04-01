@@ -20,7 +20,7 @@ export const theme = {
   // Contact Information
   contact: {
     phone: '(604) 606-4202',
-    email: 'info@aplusdental.ca',
+    email: 'info@aplusdentalclinic.com',
     address: {
       street: '1288 Commercial Drive',
       city: 'Vancouver, BC V5L 3X4',

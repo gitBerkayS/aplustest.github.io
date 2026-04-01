@@ -74,7 +74,7 @@ const site = {
 const contact = {
   phone: '(604) 606-4202',
   phoneTel: '6046064202',
-  email: 'info@aplusdental.ca',
+  email: 'info@aplusdentalclinic.com',
   address: {
     street: '1288 Commercial Drive',
     city: 'Vancouver, BC V5L 3X4',
