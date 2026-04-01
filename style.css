@@ -1877,8 +1877,18 @@ footer {
   max-height: 62%;
   display: block;
   object-fit: contain;
+  object-position: center;
   filter: brightness(0) saturate(100%) invert(89%) sepia(5%) saturate(276%) hue-rotate(326deg) brightness(96%) contrast(89%);
   transition: filter 0.2s;
+}
+
+.footer-social a[data-social="instagram"] .footer-social-img,
+.footer-social a[data-social="linkedin"] .footer-social-img {
+  width: 54%;
+  height: 54%;
+  max-width: 54%;
+  max-height: 54%;
+  transform: translateY(7px);
 }
 
 .footer-social a:hover .footer-social-img {
